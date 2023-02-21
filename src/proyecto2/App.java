@@ -45,7 +45,7 @@ public class App
         
         
         ArrayList palabras=new ArrayList<String>();
-        palabras.add("Lalalala hago mis cambios");
+        palabras.add("LALALALA CAMBIOS DESDE CASA");
         palabras.add("Sandia");
         palabras.add("Judsa");
         palabras.add("Mora");
