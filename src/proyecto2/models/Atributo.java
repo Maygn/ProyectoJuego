@@ -12,9 +12,7 @@ public class Atributo {
         this.valorBase = valorBase;
         this.modificadoresPorcentuales=new ArrayList<>();
         this.modificadoresLineales=new ArrayList<>();
-        
-        calcularFinal();
-    }
+        }
 
     
 

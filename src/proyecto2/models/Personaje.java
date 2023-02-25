@@ -27,7 +27,10 @@ public class Personaje {
     
     
     
-    public String getJugador() {
+    public Personaje() {
+		this.ataque=new Atributo(500);
+	}
+	public String getJugador() {
         return jugador;
     }
     public void setJugador(String jugador) {
