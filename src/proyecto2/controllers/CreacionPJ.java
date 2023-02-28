@@ -4,6 +4,7 @@ import proyecto2.models.Personaje;
 import proyecto2.utilities.utils;
 
 public class CreacionPJ {
+	
 	public static void datosFijos(Personaje p) {
 		System.out.println("Vamos a crear un personaje");
 		p.setJugador(utils.pedirString("Como te llamas?"));
@@ -26,6 +27,14 @@ public class CreacionPJ {
 			p.getPunteria().setValorBase(p.getPunteria().getValorBase() + 100);
 		}
 		else {	p.getCritico().setValorBase(p.getCritico().getValorBase() + 100);}
+	}
+	public static void ponerEquipo(Personaje p)  {
+		try {
+			AplicadorEquipo.equipar(p);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	

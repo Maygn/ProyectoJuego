@@ -28,7 +28,12 @@ public class Personaje {
     
     
     public Personaje() {
-		this.ataque=new Atributo(500);
+		this.ataque=new Atributo(200);
+		this.defensa=new Atributo(500);
+		this.velocidad=new Atributo(50);
+		this.punteria=new Atributo(0.8);
+		this.critico=new Atributo(1.3);
+		
 	}
 	public String getJugador() {
         return jugador;

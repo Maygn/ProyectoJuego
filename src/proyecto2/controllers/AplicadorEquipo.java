@@ -17,7 +17,7 @@ public class AplicadorEquipo {
 		if (!p.isVivo()) {
 			throw new Exception("No se puede equipar un personaje muerto/no creado.");
 		}
-		AleatorioDescartando<Integer> i1=new AleatorioDescartando<>(1,3);
+		AleatorioDescartando<Integer> i1=new AleatorioDescartando<>(1,15);
 
 		while (equipoElegidoDescartado[0] < MAXEQUIPO) {
 			
@@ -74,15 +74,50 @@ public class AplicadorEquipo {
 		case 3:
 			duplicarVida(p);
 			break;
+		case 4:
+			defensaPorAtaque(p);
+			break;
+		case 5:
+			ataquePorDefensa(p);
+			break;
+		case 6:
+			duplicarCritico(p);
+			break;
+		case 7:
+			aumentarPunteria(p);
+			break;
+		case 8:
+			vidaPorDefensa(p);
+			break;
+		case 9:
+			defensaPorVida(p);
+			break;
+		case 10:
+			velocidadPorPunteria(p);
+			break;
+		case 11:
+			punteriaPorVelocidad(p);
+			break;
+		case 12:
+			criticoPorPunteria(p);
+			break;
+		case 13:
+			punteriaPorCritico(p);
+			break;
+		case 14:
+			criticoPorVelocidad(p);
+			break;
+		case 15:
+			velocidadPorCritico(p);
+			break;
 		}
 		
 	}
 
 	public static void aumentarAtaque(Personaje p) {
 		p.getAtaque().setValorBase(p.getAtaque().getValorBase() + 100);
-
 	}
-
+	
 	public static void aumentarDefensa(Personaje p) {
 		p.getDefensa().setValorBase(p.getDefensa().getValorBase() + 100);
 	}
@@ -90,5 +125,50 @@ public class AplicadorEquipo {
 	public static void duplicarVida(Personaje p) {
 		p.getVidaMaxima().setValorBase(p.getVidaMaxima().getValorBase() * 2);
 	}
-
+	public static void defensaPorAtaque(Personaje p) {
+		p.getAtaque().setValorBase(p.getAtaque().getValorBase() -150);
+		p.getDefensa().setValorBase(p.getDefensa().getValorBase() + 300);
+	}
+	public static void ataquePorDefensa(Personaje p) {
+		p.getAtaque().setValorBase(p.getAtaque().getValorBase() +300);
+		p.getDefensa().setValorBase(p.getDefensa().getValorBase() -150);
+	}
+	public static void duplicarCritico(Personaje p) {
+		p.getCritico().setValorBase(p.getCritico().getValorBase() * 2);
+	}
+	public static void aumentarPunteria(Personaje p) {
+		p.getPunteria().setValorBase(p.getPunteria().getValorBase() +0.5);
+	}
+	public static void vidaPorDefensa(Personaje p) {
+		p.getVidaMaxima().setValorBase(p.getVidaMaxima().getValorBase() -150);
+		p.getDefensa().setValorBase(p.getDefensa().getValorBase() + 300);
+	}
+	public static void defensaPorVida(Personaje p) {
+		p.getVidaMaxima().setValorBase(p.getVidaMaxima().getValorBase() +300);
+		p.getDefensa().setValorBase(p.getDefensa().getValorBase() -150);
+	}
+	public static void velocidadPorPunteria(Personaje p) {
+		p.getVelocidad().setValorBase(p.getVelocidad().getValorBase() -20);
+		p.getPunteria().setValorBase(p.getPunteria().getValorBase() + 0.3);
+	}
+	public static void punteriaPorVelocidad(Personaje p) {
+		p.getVelocidad().setValorBase(p.getVelocidad().getValorBase() +15);
+		p.getPunteria().setValorBase(p.getPunteria().getValorBase() - 0.2);
+	}
+	public static void criticoPorPunteria(Personaje p) {
+		p.getCritico().setValorBase(p.getCritico().getValorBase() -0.3);
+		p.getPunteria().setValorBase(p.getPunteria().getValorBase() + 0.3);
+	}
+	public static void punteriaPorCritico(Personaje p) {
+		p.getCritico().setValorBase(p.getCritico().getValorBase() +0.3);
+		p.getPunteria().setValorBase(p.getPunteria().getValorBase() - 0.2);
+	}
+	public static void criticoPorVelocidad(Personaje p) {
+		p.getCritico().setValorBase(p.getCritico().getValorBase() -0.3);
+		p.getVelocidad().setValorBase(p.getVelocidad().getValorBase() +20);
+	}
+	public static void velocidadPorCritico(Personaje p) {
+		p.getCritico().setValorBase(p.getCritico().getValorBase() +0.3);
+		p.getVelocidad().setValorBase(p.getVelocidad().getValorBase() - 20);
+	}
 }
