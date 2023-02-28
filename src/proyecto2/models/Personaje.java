@@ -28,6 +28,8 @@ public class Personaje {
     
     
     public Personaje() {
+    	this.vidaMaxima=new Atributo(1000);
+    	this.vidaActual=new Atributo(1000);
 		this.ataque=new Atributo(200);
 		this.defensa=new Atributo(500);
 		this.velocidad=new Atributo(50);
