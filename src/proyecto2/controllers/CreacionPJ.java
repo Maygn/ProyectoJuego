@@ -4,7 +4,9 @@ import proyecto2.models.Personaje;
 import proyecto2.utilities.utils;
 
 public class CreacionPJ {
-	
+
+	Personaje p=new Personaje();
+
 	public static void datosFijos(Personaje p) {
 		System.out.println("Vamos a crear un personaje");
 		p.setJugador(utils.pedirString("Como te llamas?"));
