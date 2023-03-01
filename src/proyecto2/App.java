@@ -6,18 +6,61 @@ import java.util.List;
 import java.util.UUID;
 
 import proyecto2.controllers.AplicadorEquipo;
+<<<<<<< Updated upstream
 import proyecto2.controllers.CreacionPJ;
+=======
+import proyecto2.controllers.CreadorPJ;
+>>>>>>> Stashed changes
 import proyecto2.models.Atributo;
 import proyecto2.models.Personaje;
 import proyecto2.models.movimientos.AtaqueEjemplo;
 import proyecto2.models.movimientos.Realizable;
 import proyecto2.utilities.AleatorioDescartando;
 
+<<<<<<< Updated upstream
 public class App {
     public static void main(String[] args) {
         Personaje p1 = new Personaje();
         CreacionPJ.datosFijos(p1);
         CreacionPJ.datosVariables(p1);
+=======
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	 Personaje p1=new Personaje();
+CreadorPJ.atributosBasicos(p1);
+        
+        p1.setAtaque(new Atributo(1000));
+        p1.setVivo(true);
+//
+//        p1.setVidaMaxima(new Atributo(200));
+//        p1.setVidaActual(new Atributo(200));
+//
+//        System.out.println(p1.toString());
+//
+//        Realizable a1= new AtaqueEjemplo("Patada","Una patada",100,"Golpe");
+//
+//        System.out.println(a1.toString());
+//
+//        a1.realizar(p1, p1);
+//
+//        p1.getVidaActual().calcularFinal();
+//
+//
+//        System.out.println(p1.toString());
+        
+        
+        ArrayList palabras=new ArrayList<String>();
+        palabras.add("Hago un cambio desde casa");
+        palabras.add("Sandia");
+        palabras.add("Judsa");
+        palabras.add("Mora");
+        
+        
+        AleatorioDescartando<String> ale =new AleatorioDescartando(palabras);
+        
+>>>>>>> Stashed changes
         try {
             AplicadorEquipo.equipar(p1);
         } catch (Exception e1) {
