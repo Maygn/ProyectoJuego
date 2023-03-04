@@ -6,29 +6,17 @@ import java.util.List;
 import java.util.UUID;
 
 import proyecto2.controllers.AplicadorEquipo;
-<<<<<<< Updated upstream
-import proyecto2.controllers.CreacionPJ;
-=======
 import proyecto2.controllers.CreadorPJ;
->>>>>>> Stashed changes
 import proyecto2.models.Atributo;
 import proyecto2.models.Personaje;
 import proyecto2.models.movimientos.AtaqueEjemplo;
 import proyecto2.models.movimientos.Realizable;
 import proyecto2.utilities.AleatorioDescartando;
 
-<<<<<<< Updated upstream
+
 public class App {
     public static void main(String[] args) {
         Personaje p1 = new Personaje();
-        CreacionPJ.datosFijos(p1);
-        CreacionPJ.datosVariables(p1);
-=======
-public class App 
-{
-    public static void main( String[] args )
-    {
-    	 Personaje p1=new Personaje();
 CreadorPJ.atributosBasicos(p1);
         
         p1.setAtaque(new Atributo(1000));
@@ -51,20 +39,13 @@ CreadorPJ.atributosBasicos(p1);
 //        System.out.println(p1.toString());
         
         
-        ArrayList palabras=new ArrayList<String>();
-        palabras.add("Hago un cambio desde casa");
-        palabras.add("Sandia");
-        palabras.add("Judsa");
-        palabras.add("Mora");
+       
         
+
         
-        AleatorioDescartando<String> ale =new AleatorioDescartando(palabras);
-        
->>>>>>> Stashed changes
         try {
             AplicadorEquipo.equipar(p1);
         } catch (Exception e1) {
-            // TODO Auto-generated catch block
             e1.printStackTrace();
         }
 
