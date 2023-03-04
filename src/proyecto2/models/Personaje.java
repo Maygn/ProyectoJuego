@@ -71,7 +71,10 @@ public class Personaje {
         return vidaActual;
     }
     public void setVidaActual(Atributo vidaActual) {
-        this.vidaActual = vidaActual;
+        this.vidaActual=vidaActual;
+    }
+    public void setVidaActual(double vidaActual) {   //setter sobrecargado porque es mas rápido para TODOS los ataques
+        this.vidaActual.setValorBase(vidaActual);
     }
     public Atributo getAtaque() {
         return ataque;

@@ -38,7 +38,9 @@ public class CreacionPJ {
 			e.printStackTrace();
 		}
 	}
-	
+	public static void elegirMovimientos(Personaje p) {
+		
+	}
 	
 
 }

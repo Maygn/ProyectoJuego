@@ -37,6 +37,56 @@ public class AplicadorEquipo {
 				nombreEquipo="aumento de vida.";
 				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
 				break;
+			case 4:
+				nombreEquipo="pierde ataque a cambio de defensa.";
+				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
+				break;
+				
+			case 5:
+				nombreEquipo="pierde defensa a cambio de ataque.";
+				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
+				break;
+			case 6:
+				nombreEquipo="aumento de crítico.";
+				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
+				break;
+			case 7:
+				nombreEquipo="aumento de puntería.";
+				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
+				break;
+			
+			case 8:
+				nombreEquipo="pierde vida a cambio de defensa.";
+				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
+				break;
+			case 9:
+				nombreEquipo="pierde defensa a cambio de vida.";
+				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
+				break;
+			case 10:
+				nombreEquipo="pierde velocidad a cambio de puntería.";
+				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
+				break;
+			case 11:
+				nombreEquipo="pierde puntería a cambio de velocidad.";
+				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
+				break;
+			case 12:
+				nombreEquipo="pierde crítico a cambio de puntería.";
+				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
+				break;
+			case 13:
+				nombreEquipo="pierde puntería a cambio de crítico.";
+				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
+				break;
+			case 14:
+				nombreEquipo="pierde crítico a cambio de velocidad.";
+				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
+				break;
+			case 15:
+				nombreEquipo="pierde velocidad a cambio de crítico.";
+				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
+				break;
 
 			}
 			

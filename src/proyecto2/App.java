@@ -6,18 +6,18 @@ import java.util.List;
 import java.util.UUID;
 
 import proyecto2.controllers.AplicadorEquipo;
-import proyecto2.controllers.CreadorPJ;
+import proyecto2.controllers.CreacionPJ;
 import proyecto2.models.Atributo;
 import proyecto2.models.Personaje;
+import proyecto2.models.Realizable;
 import proyecto2.models.movimientos.AtaqueEjemplo;
-import proyecto2.models.movimientos.Realizable;
 import proyecto2.utilities.AleatorioDescartando;
 
 
 public class App {
     public static void main(String[] args) {
         Personaje p1 = new Personaje();
-CreadorPJ.atributosBasicos(p1);
+
         
         p1.setAtaque(new Atributo(1000));
         p1.setVivo(true);

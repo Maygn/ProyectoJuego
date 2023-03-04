@@ -1,6 +1,4 @@
-package proyecto2.models.movimientos;
-
-import proyecto2.models.Personaje;
+package proyecto2.models;
 
 public interface Realizable {
     

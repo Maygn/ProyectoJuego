@@ -1,11 +1,11 @@
-package proyecto2.models.movimientos;
+package proyecto2.models;
 
 
 public class MovimientoBase {
-    String nombre;
-    String descripcion;
-    double velocidadBase;
-    String tipo;
+    protected String nombre;
+    protected String descripcion;
+    protected double velocidadBase;
+    protected String tipo;
 
     
     
