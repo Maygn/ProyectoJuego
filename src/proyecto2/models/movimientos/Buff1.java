@@ -1,5 +1,6 @@
 package proyecto2.models.movimientos;
 
+import proyecto2.models.Modificador;
 import proyecto2.models.MovimientoBase;
 import proyecto2.models.Personaje;
 import proyecto2.models.Realizable;
@@ -16,7 +17,7 @@ public class Buff1 extends MovimientoBase implements Realizable{
 
 	@Override
 	public void realizar(Personaje activo, Personaje pasivo) {
-		pasivo.setVidaActual(pasivo.getVidaActual().getValorBase()-20);
+		activo.getAtaque().addModificadorPorcentual(new Modificador(0.3,99,"",0));
 		
 	}
 

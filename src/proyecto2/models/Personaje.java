@@ -23,6 +23,7 @@ public class Personaje {
     private MovimientoBase mov2;
     private MovimientoBase mov3;
     private MovimientoBase mov4;
+    private MovimientoBase movElegido;
     
     private ArrayList nombresUsados;
     private ArrayList derrotados;
@@ -118,8 +119,15 @@ public class Personaje {
     	this.mov3=arrayMovs[2];
     	this.mov4=arrayMovs[3];
     }
+    
       
-    public MovimientoBase getMov1() {
+    public MovimientoBase getMovElegido() {
+		return movElegido;
+	}
+	public void setMovElegido(MovimientoBase movElegido) {
+		this.movElegido = movElegido;
+	}
+	public MovimientoBase getMov1() {
 		return mov1;
 	}
 	public void setMov1(MovimientoBase mov1) {

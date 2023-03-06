@@ -39,6 +39,9 @@ public class MovimientoBase {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
+    
+    public void realizar(Personaje activo, Personaje pasivo) {};
+    
     @Override
     public String toString() {
         return "MovimientoBase [nombre=" + nombre + ", descripcion=" + descripcion + ", velocidadBase=" + velocidadBase
