@@ -9,14 +9,15 @@ public class Ataque10 extends MovimientoBase implements Realizable{
 	public Ataque10() {
 		super("Colmillo vampírico", "Liberas tus colmillos y clavándolos profundamente en la carne del enemigo. "
 				+ "Notas como la fuerza vital succionada te hace sentir más fuerte mientras "
-				+ "el enemigo se retuerce para huir del toque helado de la muerte.", 40, "ataque");
+				+ "el enemigo se retuerce para huir del toque helado de la muerte.",
+				-10, "ataque");
 		
 	}
 
 	@Override
 	public void realizar(Personaje activo, Personaje pasivo) {
-		pasivo.setVidaActual(pasivo.getVidaActual().getValorBase()-20);
-		
+		pasivo.setVidaActual(pasivo.getVidaActual().getValorBase()-40);
+		activo.setVidaActual(activo.getVidaActual().getValorBase()+40);
 	}
 
 }

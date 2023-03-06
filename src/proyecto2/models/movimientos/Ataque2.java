@@ -7,8 +7,10 @@ import proyecto2.models.Realizable;
 public class Ataque2 extends MovimientoBase implements Realizable{
 
 	public Ataque2() {
-		super("Tormenta de hielo", "desata una tempestad de vientos helados y copos de nieve que se arremolinan"
-				+ " alrededor del enemigo, congelando su piel y enfriando sus huesos hasta la médula.", 0, "ataque");
+		super("Tormenta de hielo", "desata una tempestad de vientos helados y "
+				+ "lanzas de hielo que se arremolinan alrededor del enemigo, "
+				+ "congelando su piel y enfriando sus huesos hasta la médula.",
+				10, "ataque");
 		
 	}
 

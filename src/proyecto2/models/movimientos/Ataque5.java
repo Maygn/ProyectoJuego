@@ -7,8 +7,10 @@ import proyecto2.models.Realizable;
 public class Ataque5 extends MovimientoBase implements Realizable{
 
 	public Ataque5() {
-		super("Mordisco Salvaje", "El personaje salta sobre el oponente y le muerde ferozmente, con sus afilados dientes"
-				+ " hundiéndose en su piel y desgarrando sus músculos.", 40, "ataque");
+		super("Mordisco Salvaje", "El personaje salta sobre el oponente y le "
+				+ "muerde ferozmente, con sus afilados dientes"
+				+ " hundiéndose en su piel y desgarrando sus músculos.",
+				40, "ataque");
 		
 	}
 

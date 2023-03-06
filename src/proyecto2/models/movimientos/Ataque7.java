@@ -1,5 +1,6 @@
 package proyecto2.models.movimientos;
 
+import proyecto2.models.Modificador;
 import proyecto2.models.MovimientoBase;
 import proyecto2.models.Personaje;
 import proyecto2.models.Realizable;
@@ -16,8 +17,8 @@ public class Ataque7 extends MovimientoBase implements Realizable{
 
 	@Override
 	public void realizar(Personaje activo, Personaje pasivo) {
-		pasivo.setVidaActual(pasivo.getVidaActual().getValorBase()-20);
-		
+		pasivo.setVidaActual(pasivo.getVidaActual().getValorBase()-5);
+		pasivo.getVidaActual().addModificadorLineal(new Modificador(-10,99,"",5));
 	}
 
 }
