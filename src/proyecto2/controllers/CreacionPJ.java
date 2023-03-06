@@ -5,7 +5,7 @@ import proyecto2.utilities.utils;
 
 public class CreacionPJ {
 
-	Personaje p=new Personaje();
+	
 
 	public static void datosFijos(Personaje p) {
 		System.out.println("Vamos a crear un personaje");
@@ -39,7 +39,12 @@ public class CreacionPJ {
 		}
 	}
 	public static void elegirMovimientos(Personaje p) {
-		
+		try {
+			AplicadorMovimientos.darEleccion(p);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 

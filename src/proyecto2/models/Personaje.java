@@ -18,7 +18,12 @@ public class Personaje {
     private Atributo velocidad;
     private Atributo punteria;
     private Atributo critico;
-
+    
+    private MovimientoBase mov1;
+    private MovimientoBase mov2;
+    private MovimientoBase mov3;
+    private MovimientoBase mov4;
+    
     private ArrayList nombresUsados;
     private ArrayList derrotados;
     private ArrayList baneados;
@@ -106,7 +111,39 @@ public class Personaje {
     public void setCritico(Atributo critico) {
         this.critico = critico;
     }
-    public ArrayList getNombresUsados() {
+    
+    public void setMovimientos(MovimientoBase[] arrayMovs) {
+    	this.mov1=arrayMovs[0];
+    	this.mov2=arrayMovs[1];
+    	this.mov3=arrayMovs[2];
+    	this.mov4=arrayMovs[3];
+    }
+      
+    public MovimientoBase getMov1() {
+		return mov1;
+	}
+	public void setMov1(MovimientoBase mov1) {
+		this.mov1 = mov1;
+	}
+	public MovimientoBase getMov2() {
+		return mov2;
+	}
+	public void setMov2(MovimientoBase mov2) {
+		this.mov2 = mov2;
+	}
+	public MovimientoBase getMov3() {
+		return mov3;
+	}
+	public void setMov4(MovimientoBase mov3) {
+		this.mov3 = mov3;
+	}
+	public MovimientoBase getMov4() {
+		return mov3;
+	}
+	public void setMov3(MovimientoBase mov3) {
+		this.mov3 = mov3;
+	}
+	public ArrayList getNombresUsados() {
         return nombresUsados;
     }
     public void setNombresUsados(ArrayList nombresUsados) {
@@ -149,7 +186,7 @@ public class Personaje {
         return "Personaje [jugador=" + jugador + ", vivo=" + vivo + ", nombre=" + nombre + ", descripcion="
                 + descripcion + ", vidaMaxima=" + vidaMaxima + ", vidaActual=" + vidaActual + ", ataque=" + ataque
                 + ", defensa=" + defensa + ", velocidad=" + velocidad + ", punteria=" + punteria + ", critico="
-                + critico + ", nombresUsados=" + nombresUsados + ", derrotados=" + derrotados + ", baneados=" + baneados
+                + critico + ", nombresUsados=" + nombresUsados + ", derrotados=" + derrotados + ", baneados=" + baneados + ", ataques: "+mov1.getNombre()+" "+mov2.getNombre()+" "+ mov3.getNombre() +" "+mov4
                 + "]";
     }
 
