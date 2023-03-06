@@ -17,7 +17,7 @@ public class Buff1 extends MovimientoBase implements Realizable{
 
 	@Override
 	public void realizar(Personaje activo, Personaje pasivo) {
-		activo.getAtaque().addModificadorPorcentual(new Modificador(0.3,2,"",0));
+		pasivo.getAtaque().addModificadorPorcentual(new Modificador(0.3,2,"",0));
 		
 	}
 

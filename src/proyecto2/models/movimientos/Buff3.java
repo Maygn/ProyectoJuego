@@ -16,7 +16,7 @@ public class Buff3 extends MovimientoBase implements Realizable{
 
 	@Override
 	public void realizar(Personaje activo, Personaje pasivo) {
-		pasivo.setVidaActual(pasivo.getVidaActual().getValorBase()-20);
+		activo.setVidaActual(activo.getVidaActual().getValorBase()+30);
 		
 	}
 
