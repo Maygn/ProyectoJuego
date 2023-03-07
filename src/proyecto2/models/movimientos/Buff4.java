@@ -6,7 +6,12 @@ import proyecto2.models.Personaje;
 import proyecto2.models.Realizable;
 
 public class Buff4 extends MovimientoBase implements Realizable{
-
+	/**
+	 * 
+	 * Este constructor nos encarga de mostrar el nombre de movimiento, con una corta descripcion de lo que hace nuestro movimiento
+	 *  y si nu8estro movimiento nos afecta a nosotros o al enemigo
+	 *   
+	 */
 	public Buff4() {
 		super("Enlace del alma", "Místicamente, consigues enlazar tu alma con la de tu oponente. "
 				+ "Ves como se forma una línea en el aire que os une y por la que viaja una corriente"
@@ -14,7 +19,12 @@ public class Buff4 extends MovimientoBase implements Realizable{
 				, 40, "buff");
 		
 	}
-
+	/**
+	 * @param Personaje Activo y Personaje Pasivo
+	 * 
+	 * Este metodo se encarga de modificar al Personaje Activo y Pasivo
+	 * 
+	 */
 	@Override
 	public void realizar(Personaje activo, Personaje pasivo) {
 		activo.getCritico().addModificadorPorcentual(new Modificador(1.3,1,"",0));
