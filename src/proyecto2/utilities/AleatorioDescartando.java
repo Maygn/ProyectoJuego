@@ -52,7 +52,8 @@ public class AleatorioDescartando<E> {
 
 
 	/**
-	 * Retorna un numero aleatorio entre el minimo y el maximo, siempre que
+	 * Retorna un numero aleatorio entre el minimo y el maximo, hasta que se te hayan ofrecido todas las opciones existentes.
+		@return elegido
 	 *  */
 	public E darAleatorio() throws Exception {
 		

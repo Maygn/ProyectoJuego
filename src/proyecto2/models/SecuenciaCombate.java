@@ -8,6 +8,10 @@ public class SecuenciaCombate {
 	
 	//TODO: Comprobar si ambos personajes estan vivos (Muy probablemente desde los llamadores)
 	
+	
+	/**@param Personaje p1
+	 * Te informa del nombre de los ataques que puedes elegir, te permite elegir uno
+	 * y lo almacena en el "movimientoElegido" del personaje*/
 	public static void elegirMovimiento(Personaje p1) {
 		String mov1=p1.getMov1().getNombre().toString();
 		String mov2=p1.getMov2().getNombre().toString();
@@ -56,7 +60,10 @@ public class SecuenciaCombate {
 			break;
 		}
 	}
-
+/**@param Personaje p1
+ * @param Personaje p2
+ * El método calcula la velocidad a la que sale el ataque elegido por cada jugador, en base a eso
+ * realiza los ataques en el orden que corresponda*/
 	public static void hacerAtaques(Personaje p1, Personaje p2) {
 		
 		double velocidadTotalP1=p1.getVelocidad().getValorFinal()+p1.getMovElegido().getVelocidadBase();

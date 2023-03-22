@@ -49,7 +49,10 @@ public class AplicadorMovimientos {
 
 
 
-
+/**
+ * @param Personaje p
+ * Permite elegir cuatro movimientos, dos de ellos del array de ataques agresivos y otros dos de los que no pegan.
+ * Te deja elegir uno de entre tres para cada caso.*/
 
 	public static void darEleccion(Personaje p) throws Exception {
 		MovimientoBase[] arrayMovs = new MovimientoBase[4];

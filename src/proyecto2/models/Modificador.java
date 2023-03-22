@@ -30,7 +30,7 @@ public class Modificador implements Serializable{
         this.origen=m.origen;
         this.basePeriodica=m.basePeriodica;
     }
-/**gtter y setter*/
+/**getter y setter*/
     public double getCantidad() {
         return cantidad;
     }

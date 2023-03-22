@@ -9,13 +9,15 @@ public class MovimientoBase implements Serializable{
     protected String tipo;
 
     
-    
+    //Constructor
     public MovimientoBase(String nombre, String descripcion, double velocidadBase, String tipo) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.velocidadBase = velocidadBase;
         this.tipo = tipo;
     }
+    
+    //getters y setters
     public String getNombre() {
         return nombre;
     }
@@ -40,7 +42,7 @@ public class MovimientoBase implements Serializable{
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-    
+    //para overridear
     public void realizar(Personaje activo, Personaje pasivo) {};
     
     @Override

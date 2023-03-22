@@ -3,7 +3,10 @@ package proyecto2.services;
 import proyecto2.models.Personaje;
 import proyecto2.utilities.AleatorioDescartando;
 import proyecto2.utilities.utils;
-
+/**
+ * @param Personaje p
+ * El método te da opciones de equipo, permitiendo que rechaces hasta tres de ellas y quedándote al final con otras tres. Estas
+ * modificarán los atributos básicos del personaje.*/
 public class AplicadorEquipo {
 	public static void equipar(Personaje p) throws Exception {
 
@@ -13,7 +16,6 @@ public class AplicadorEquipo {
 		int maximoDescarte = 3;
 		String nombreEquipo;
 
-		// Clausulas escudo
 
 		AleatorioDescartando<Integer> i1=new AleatorioDescartando<>(1,15);
 
@@ -91,7 +93,15 @@ public class AplicadorEquipo {
 		}
 		p.actualizarAtributos();
 	}
-	
+	/**
+	 * @param Personaje p
+	 * @param int[] equipoElegidoDEscartado
+	 * @param int maximoDescarte
+	 * @param String nombreEquipo
+	 * @return int[] equipoElegidoDEscartado
+	 * El metodo te ofrece la opcion de aplicar una modificacion a los atributos del personaje, que puedes aceptar o rechazar un número limitado
+	 * de veces.
+	 * */
 	public static int[] preguntarPasiva(Personaje p, int opcionAleatoria, int[] equipoElegidoDescartado, int maximoDescarte, String nombreEquipo) {
 		if (utils.leerCharEspecifico("Quieres un "+ nombreEquipo +"? [s]/[n] (Elegidos :" + equipoElegidoDescartado[0]//que no pregunte si ya no puede descartar mas
 				+ " ,descartados: " + equipoElegidoDescartado[1], new char[] { 'S', 'N' }) == 'S') {
@@ -110,7 +120,11 @@ public class AplicadorEquipo {
 		
 		return equipoElegidoDescartado;
 	}
-	
+	/**
+	 * @param Personaje p
+	 * @param int opcionAleatoria
+	 * El método recibe la opción que tiene que aplicar sobre los atributos del personaje y llama 
+	 * al método que realiza los cambios sobre estos.*/
 	private static void aplicarPasiva(Personaje p, int opcionAleatoria) {
 		switch(opcionAleatoria) {
 		case 1:
@@ -161,7 +175,10 @@ public class AplicadorEquipo {
 		}
 		
 	}
-
+/** TODOS LOS MÉTODOS SIGUIENTES son variantes del mismo proceso aplicadas a atributos similares.
+ * @param Personaje p
+ * Son un listado de métodos que aplican modificaciones permanentes sobre el valor base de los atributos del personaje
+ * */
 	public static void aumentarAtaque(Personaje p) {
 		p.getAtaque().setValorBase(p.getAtaque().getValorBase() + 100);
 	}

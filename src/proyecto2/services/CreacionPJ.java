@@ -5,13 +5,19 @@ import proyecto2.utilities.utils;
 
 public class CreacionPJ {
 
-	
-
+	/**
+	 * @param Personaje p
+	 * Coge un objeto personaje vacío y setea los atributos que van a ser fijos (variables, no otros objetos)*/
 	public static void datosFijos(Personaje p) {
 		System.out.println("Vamos a crear un personaje");
-		p.setNombre(utils.pedirString("Y como quieres que se llame tu personaje?"));
+		p.setNombre(utils.pedirString("Como quieres que se llame tu personaje?"));
 		p.setDescripcion(utils.pedirString("Describe tu especie, profesion o lo que quieras"));
 	}
+	/**
+	 * @param Personaje p
+	 * Sobre los valores básicos por defecto para las caracteristicas de personajes,
+	 * el método te ofrece una serie de opciones binarias para elegir que caracteristicas
+	 * quieres potenciar*/
 	public static void datosVariables(Personaje p) {
 		
 		if(utils.leerCharEspecifico("que prefieres, [a]taque o [d]ef", new char[] {'a','d'})=='a') {
@@ -31,29 +37,34 @@ public class CreacionPJ {
 		
 		p.actualizarAtributos();
 	}
+	/**@oaram Personaje p
+	 * Solo llama al método que pone el equipo y asegura las excepciones posibles*/
 	public static void ponerEquipo(Personaje p)  {
 		try {
 			AplicadorEquipo.equipar(p);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+		
 			e.printStackTrace();
 		}
 	}
+	/**@oaram Personaje p
+	 * Solo llama al método que permite elegir movimientos y asegura las excepciones posibles*/
 	public static void elegirMovimientos(Personaje p) {
 		try {
 			AplicadorMovimientos.darEleccion(p);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 	}
-	
+	//Solo es la secuencia de métodos de esta clase para llamarla desde el main con uno solo.
 	public static void creacionEnSerie(Personaje p) {
 		datosFijos(p);
 		datosVariables(p);
 		ponerEquipo(p);
 		elegirMovimientos(p);
-		p.setVivo(true);// ESTA VIVOOOOOOO
+		p.setVivo(true);// ESTA VIVOOOOOOO. Es el último paso y lo usamos de control para que no sea posible lanzar al juego
+						//personajes que no estén correctamente creados
 	}
 	
 

@@ -5,15 +5,17 @@ import java.util.ArrayList;
 
 public class Personaje implements Serializable{ 
 	//atributos
-	/*los atributos del personaje son objetos de tipo atributo que incluyen la variable y posibles 
-	 * modificaciones, que no se quiere que modifiquen el valor base */
-    private String jugador;
+	
+    private String jugador;//No se usa en la creacion que se ofrece al jugador, es el equivalente a vincular el personaje a 
+    					// una cuenta de correo en un servidor de verdad
 
     private boolean vivo;
 
     private String nombre;
     private String descripcion; 
-
+    /*los atributos del personaje son objetos de tipo atributo en los que se ha puesto por separado
+	 * el valor base  y posibles variaciones de este, de forma que se pueden almacenar las variaciones temporales
+	 * sin sustituir el valor original del atributo*/
     private Atributo vidaMaxima;
     private Atributo vidaActual;
 
@@ -22,20 +24,21 @@ public class Personaje implements Serializable{
     private Atributo velocidad;
     private Atributo punteria;
     private Atributo critico;
-    
+    /*Son objetos con sus propios atributos*/
     private MovimientoBase mov1;
     private MovimientoBase mov2;
     private MovimientoBase mov3;
     private MovimientoBase mov4;
-    private MovimientoBase movElegido;
+    private MovimientoBase movElegido;//aqui se guarda el que se ha elegido para usar en cada turno, de los cuatro anteriores
     
+    /*para que no puedas hacer copia de seguridad de tu archivo de personaje y usarlo despues de muerto*/
     private ArrayList nombresUsados;
     private ArrayList derrotados;
     private ArrayList baneados;
     
     
     
-    
+    //constructor con valores de inicio
     public Personaje() {
     	this.vidaMaxima=new Atributo(1000);
     	this.vidaActual=new Atributo(1000);
@@ -44,8 +47,9 @@ public class Personaje implements Serializable{
 		this.velocidad=new Atributo(50);
 		this.punteria=new Atributo(0.8);
 		this.critico=new Atributo(1.3);
-		
 	}
+    
+    //getters y setters
 	public String getJugador() {
         return jugador;
     }
@@ -82,7 +86,7 @@ public class Personaje implements Serializable{
     public void setVidaActual(Atributo vidaActual) {
         this.vidaActual=vidaActual;
     }
-    public void setVidaActual(double vidaActual) {   //setter sobrecargado porque es mas rápido para TODOS los ataques
+    public void setVidaActual(double vidaActual) {   //setter sobrecargado porque es mas rápido para crear TODOS los ataques
         this.vidaActual.setValorBase(vidaActual);
     }
     public Atributo getAtaque() {
@@ -173,7 +177,10 @@ public class Personaje implements Serializable{
         this.baneados = baneados;
     }
 
-    /** Recibe un valor y lo reduce de la base de la vida actual
+    /**@param double daño
+     * @return this.vidaActual.getValorFinal(); 
+     * 
+     * Recibe un valor de daño y lo reduce de la vida actual
      * CUIDADO: Retorna el valor final (quitando venenos) de la vida actual.
      */
     public double recibirDaño(double daño){
@@ -182,6 +189,10 @@ public class Personaje implements Serializable{
         return this.vidaActual.getValorFinal();
     }
 
+    
+    /*calcula el estado de los valores de los atributos teniendo
+     * en cuenta los modificadores que se les apliquen en el momento dado. */
+    
     public void actualizarAtributos(){
         this.ataque.calcularFinal();
         this.defensa.calcularFinal();

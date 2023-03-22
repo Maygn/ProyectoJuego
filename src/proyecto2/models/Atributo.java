@@ -9,6 +9,7 @@ public class Atributo implements Serializable{
     private ArrayList<Modificador> modificadoresLineales;
     private ArrayList<Modificador> modificadoresPorcentuales;
     
+ //constructor
     public Atributo(double valorBase) {
         this.valorBase = valorBase;
         this.modificadoresPorcentuales=new ArrayList<>();
@@ -16,42 +17,27 @@ public class Atributo implements Serializable{
         }
 
     
-
+//getters y setters
     public double getValorBase() {
         return valorBase;
     }
-
-
-
     public void setValorBase(double valorBase) {
         this.valorBase = valorBase;
     }
-
-
-
     public double getValorFinal() {
         return valorFinal;
     }
-
-
-
     public void setValorFinal(double valorFinal) {
         this.valorFinal = valorFinal;
     }
-
-
-
+    
+    //añadidores y getters de arraylists
     public ArrayList<Modificador> getModificadoresLineales() {
         return modificadoresLineales;
     }
-
-
-
-
     public ArrayList<Modificador> getModificadoresPorcentuales() {
         return modificadoresPorcentuales;
     }
-
     public void addModificadorPorcentual(Modificador m){
         this.modificadoresPorcentuales.add(m);
     }
