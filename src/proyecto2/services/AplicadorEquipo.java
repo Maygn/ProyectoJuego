@@ -1,4 +1,4 @@
-package proyecto2.controllers;
+package proyecto2.services;
 
 import proyecto2.models.Personaje;
 import proyecto2.utilities.AleatorioDescartando;
@@ -14,9 +14,7 @@ public class AplicadorEquipo {
 		String nombreEquipo;
 
 		// Clausulas escudo
-		if (!p.isVivo()) {
-			throw new Exception("No se puede equipar un personaje muerto/no creado.");
-		}
+
 		AleatorioDescartando<Integer> i1=new AleatorioDescartando<>(1,15);
 
 		while (equipoElegidoDescartado[0] < MAXEQUIPO) {
@@ -90,8 +88,8 @@ public class AplicadorEquipo {
 
 			}
 			
-			System.out.println(p.toString());
 		}
+		p.actualizarAtributos();
 	}
 	
 	public static int[] preguntarPasiva(Personaje p, int opcionAleatoria, int[] equipoElegidoDescartado, int maximoDescarte, String nombreEquipo) {

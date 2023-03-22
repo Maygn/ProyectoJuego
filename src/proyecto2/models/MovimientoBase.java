@@ -1,7 +1,8 @@
 package proyecto2.models;
 
+import java.io.Serializable;
 
-public class MovimientoBase {
+public class MovimientoBase implements Serializable{
     protected String nombre;
     protected String descripcion;
     protected double velocidadBase;

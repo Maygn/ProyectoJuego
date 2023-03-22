@@ -1,6 +1,8 @@
 package proyecto2.models;
 
-public class Modificador {
+import java.io.Serializable;
+
+public class Modificador implements Serializable{
 	/**cantidad de modificador en inicio*/
     private double cantidad;
 	/**duracion del modificador*/

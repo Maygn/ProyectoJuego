@@ -1,8 +1,9 @@
 package proyecto2.models;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Atributo {
+public class Atributo implements Serializable{
     private double valorBase;
     private double valorFinal;
     private ArrayList<Modificador> modificadoresLineales;
@@ -77,6 +78,8 @@ public class Atributo {
         }
 
         this.valorFinal=this.valorFinal+sumaLineal;
+        
+        bajarConteos(); //PUEDE FALLAR, CUIDADO
     }
 
     /**

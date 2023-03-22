@@ -1,4 +1,4 @@
-package proyecto2.controllers;
+package proyecto2.services;
 
 import proyecto2.models.Personaje;
 import proyecto2.utilities.utils;
@@ -9,7 +9,6 @@ public class CreacionPJ {
 
 	public static void datosFijos(Personaje p) {
 		System.out.println("Vamos a crear un personaje");
-		p.setJugador(utils.pedirString("Como te llamas?"));
 		p.setNombre(utils.pedirString("Y como quieres que se llame tu personaje?"));
 		p.setDescripcion(utils.pedirString("Describe tu especie, profesion o lo que quieras"));
 	}
@@ -29,6 +28,8 @@ public class CreacionPJ {
 			p.getPunteria().setValorBase(p.getPunteria().getValorBase() + 100);
 		}
 		else {	p.getCritico().setValorBase(p.getCritico().getValorBase() + 100);}
+		
+		p.actualizarAtributos();
 	}
 	public static void ponerEquipo(Personaje p)  {
 		try {
@@ -45,6 +46,14 @@ public class CreacionPJ {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	public static void creacionEnSerie(Personaje p) {
+		datosFijos(p);
+		datosVariables(p);
+		ponerEquipo(p);
+		elegirMovimientos(p);
+		p.setVivo(true);// ESTA VIVOOOOOOO
 	}
 	
 

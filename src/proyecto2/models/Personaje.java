@@ -1,8 +1,12 @@
 package proyecto2.models;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Personaje {
+public class Personaje implements Serializable{ 
+	//atributos
+	/*los atributos del personaje son objetos de tipo atributo que incluyen la variable y posibles 
+	 * modificaciones, que no se quiere que modifiquen el valor base */
     private String jugador;
 
     private boolean vivo;
@@ -28,7 +32,6 @@ public class Personaje {
     private ArrayList nombresUsados;
     private ArrayList derrotados;
     private ArrayList baneados;
-    
     
     
     
@@ -187,6 +190,7 @@ public class Personaje {
         this.critico.calcularFinal();
         this.vidaActual.calcularFinal();
         this.vidaMaxima.calcularFinal();
+        this.velocidad.calcularFinal();
     }
 
     @Override
@@ -194,7 +198,7 @@ public class Personaje {
         return "Personaje [jugador=" + jugador + ", vivo=" + vivo + ", nombre=" + nombre + ", descripcion="
                 + descripcion + ", vidaMaxima=" + vidaMaxima + ", vidaActual=" + vidaActual + ", ataque=" + ataque
                 + ", defensa=" + defensa + ", velocidad=" + velocidad + ", punteria=" + punteria + ", critico="
-                + critico + ", nombresUsados=" + nombresUsados + ", derrotados=" + derrotados + ", baneados=" + baneados + ", ataques: "+mov1.getNombre()+" "+mov2.getNombre()+" "+ mov3.getNombre() +" "+mov4
+                + critico + ", nombresUsados=" + nombresUsados + ", derrotados=" + derrotados + ", baneados=" + baneados + ", ataques: "+mov1.getNombre()+" "+mov2.getNombre()+" "+ mov3.getNombre() +" "+mov4.getNombre()
                 + "]";
     }
 

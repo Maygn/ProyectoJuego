@@ -1,18 +1,47 @@
 package proyecto2.models;
 
+import java.io.Console;
+
 import proyecto2.utilities.utils;
 
 public class SecuenciaCombate {
+	
+	//TODO: Comprobar si ambos personajes estan vivos (Muy probablemente desde los llamadores)
 	
 	public static void elegirMovimiento(Personaje p1) {
 		String mov1=p1.getMov1().getNombre().toString();
 		String mov2=p1.getMov2().getNombre().toString();
 		String mov3=p1.getMov3().getNombre().toString();
 		String mov4=p1.getMov4().getNombre().toString();
-		System.out.println("Tus movimientos disponibles son: " + mov1 +"\n "
-				+ mov2 +"\n"+mov3+ "\n" +mov4);
+		System.out.println("Tus movimientos disponibles son: 1-" + mov1 +"\n 2-"
+				+ mov2 +"\n 3-"+mov3+ "\n 4-" +mov4);
 		
-		switch (utils.leerDatoEntero("Cual de los ataques quieres usar? ", 1, 4)) {
+		
+//		CAMBIAR UNA VEZ TERMINEMOS Y SE VAYA A COMPILAR
+//		LA CONSOLA DE ECLIPSE NO TOLERA System.console()
+		
+//		Console cs1=System.console(); //Define la consola actual
+//		boolean fuera=false;
+//		int elegido=0;
+//		
+//		while(!fuera) {
+//			char[] arr1=cs1.readPassword("Cual de los ataques quieres usar?"); //Usa la consola para leer el movimiento, sin mostrar lo que escribe el usuario
+//			elegido=Character.getNumericValue(arr1[0]); // Lo convierte en valor numérico.
+//			
+//			if(elegido>0 && elegido <5) {
+//				fuera=true;
+//			}
+//			else {
+//				System.out.println("Ese número no es uno de tus cuatro movimientos. ");
+//				System.out.println("Tus movimientos disponibles son: 1-" + mov1 +"\n 2-"
+//						+ mov2 +"\n 3-"+mov3+ "\n 4-" +mov4);
+//			}
+//		}
+		
+        
+        
+		
+		switch (utils.leerDatoEntero("Elige el movimiento", 1, 4)) { //CAMBIAR POR elegido CUANDO SE COMPILE
 		case 1:
 			p1.setMovElegido(p1.getMov1());
 			break;
@@ -40,10 +69,14 @@ public class SecuenciaCombate {
 			p2.getMovElegido().realizar(p2,p1);
 			p1.getMovElegido().realizar(p1,p2);
 		}
+		
 	}
 	
 	public static void comprobarCosas(Personaje p1, Personaje p2) {
-		
+		//Actualizar atributos
+		//Bajar tickeos
+		//Comprobar muerte y victoria
+		//Añadir a lista de derrotados si el Jugador no es NPC
 		
 	}
 	

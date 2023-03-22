@@ -1,20 +1,12 @@
-package proyecto2.controllers;
+package proyecto2.services;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 import proyecto2.models.MovimientoBase;
 import proyecto2.models.Personaje;
-import proyecto2.models.movimientos.Ataque1;
-import proyecto2.models.movimientos.Ataque10;
-import proyecto2.models.movimientos.Ataque2;
-import proyecto2.models.movimientos.Ataque3;
-import proyecto2.models.movimientos.Ataque4;
-import proyecto2.models.movimientos.Ataque5;
-import proyecto2.models.movimientos.Ataque6;
-import proyecto2.models.movimientos.Ataque7;
-import proyecto2.models.movimientos.Ataque8;
-import proyecto2.models.movimientos.Ataque9;
+import proyecto2.models.movimientos.*;
+
 import proyecto2.utilities.AleatorioDescartando;
 import proyecto2.utilities.utils;
 
@@ -41,23 +33,35 @@ public class AplicadorMovimientos {
 	static MovimientoBase a9=new Ataque9();
 	static MovimientoBase a10=new Ataque10();
 	
+	static MovimientoBase b1=new Buff1();
+	static MovimientoBase b2=new Buff2();
+	static MovimientoBase b3=new Buff3();
+	static MovimientoBase b4=new Buff4();
+	static MovimientoBase b5=new Buff5();
+	static MovimientoBase b6=new Buff6();
+	static MovimientoBase b7=new Buff7();
+	static MovimientoBase b8=new Buff8();
+	static MovimientoBase b9=new Buff9();
+	static MovimientoBase b10=new Buff10();
+	
 	static ArrayList<MovimientoBase> ataques=new ArrayList<>(Arrays.asList(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10));
+	static ArrayList<MovimientoBase> buffs=new ArrayList<>(Arrays.asList(b1,b2,b3,b4,b5,b6,b7,b8,b9,b10));
 
 
 
 
 
 	public static void darEleccion(Personaje p) throws Exception {
-		MovimientoBase[] arrayMovs = new MovimientoBase[3];
+		MovimientoBase[] arrayMovs = new MovimientoBase[4];
 		AleatorioDescartando<MovimientoBase> elegirAtaques = new AleatorioDescartando<>(ataques);
-		AleatorioDescartando<MovimientoBase> elegirNopegar = new AleatorioDescartando<>(noPegar);
+		AleatorioDescartando<MovimientoBase> elegirNopegar = new AleatorioDescartando<>(buffs);
 
 		for (int lcv = 0; lcv < arrayMovs.length; lcv++) {
 			for (int i = 0; i < 3; i++) {
 				
 				MovimientoBase sacado;
 				
-				if (lcv < 4) {
+				if (lcv < 2) {
 					sacado = elegirAtaques.darAleatorio();
 				} else {
 					sacado = elegirNopegar.darAleatorio();
