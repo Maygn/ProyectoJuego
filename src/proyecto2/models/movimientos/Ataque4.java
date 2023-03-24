@@ -13,9 +13,9 @@ public class Ataque4 extends MovimientoBase implements Realizable{
 	 */
 	public Ataque4() {
 		super("Patada voladora", "carga y salta en el aire, propinando una patada"
-				+ " devastadora que envía ondas de choque a través del suelo. Al "
-				+ "aterrizar, una ráfaga de energía explota desde sus pies, "
-				+ "dejando un rastro de energía brillante a su paso.",
+				+ " devastadora que envía ondas de choque a traves del suelo. Al "
+				+ "aterrizar, una rafaga de energia explota desde sus pies, "
+				+ "dejando un rastro de energia brillante a su paso.",
 				40, "ataque");
 		
 	}

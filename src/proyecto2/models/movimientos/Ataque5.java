@@ -14,7 +14,7 @@ public class Ataque5 extends MovimientoBase implements Realizable{
 	public Ataque5() {
 		super("Mordisco Salvaje", "El personaje salta sobre el oponente y le "
 				+ "muerde ferozmente, con sus afilados dientes"
-				+ " hundiéndose en su piel y desgarrando sus músculos.",
+				+ " hundiendose en su piel y desgarrando sus musculos.",
 				40, "ataque");
 		
 	}

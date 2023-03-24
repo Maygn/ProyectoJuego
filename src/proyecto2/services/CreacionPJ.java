@@ -10,7 +10,23 @@ public class CreacionPJ {
 	 * Coge un objeto personaje vacío y setea los atributos que van a ser fijos (variables, no otros objetos)*/
 	public static void datosFijos(Personaje p) {
 		System.out.println("Vamos a crear un personaje");
-		p.setNombre(utils.pedirString("Como quieres que se llame tu personaje?"));
+		String nombrePj="";
+		boolean fuera=false;
+		
+		while(!fuera) {
+			nombrePj=utils.pedirString("Como quieres que se llame tu personaje?");
+			if(p.getNombresUsados().contains(nombrePj)) {
+				System.out.println("Ese nombre ya lo has usado.");
+			}
+			else {
+				fuera=true;
+			}
+		}
+		
+		
+		p.setNombre(nombrePj);
+		p.getNombresUsados().add(nombrePj);
+		
 		p.setDescripcion(utils.pedirString("Describe tu especie, profesion o lo que quieras"));
 	}
 	/**
@@ -53,7 +69,7 @@ public class CreacionPJ {
 		try {
 			AplicadorMovimientos.darEleccion(p);
 		} catch (Exception e) {
-			
+		
 			e.printStackTrace();
 		}
 	}

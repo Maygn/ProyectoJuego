@@ -14,9 +14,9 @@ public class Buff10 extends MovimientoBase implements Realizable{
 	 *   
 	 */
 	public Buff10() {//incremento punteria
-		super("Concentración extrema", "Abres los ojos de par en par al asombrarte mientras el mundo a su alrededor se ralentiza. "
-				+ "Puedes ver cada movimiento que hacen sus enemigos con una precisión increíble. Tu arma parece convertirse "
-				+ "en una extensión de tu brazo golpeando a tus enemigos con una precisión infalible"
+		super("Concentracion extrema", "Abres los ojos de par en par al asombrarte mientras el mundo a su alrededor se ralentiza. "
+				+ "Puedes ver cada movimiento que hacen sus enemigos con una precisión increible. Tu arma parece convertirse "
+				+ "en una extension de tu brazo golpeando a tus enemigos con una precisión infalible"
 				, 40, "buff");
 		
 	}

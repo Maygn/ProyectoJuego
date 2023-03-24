@@ -32,21 +32,25 @@ public class Personaje implements Serializable{
     private MovimientoBase movElegido;//aqui se guarda el que se ha elegido para usar en cada turno, de los cuatro anteriores
     
     /*para que no puedas hacer copia de seguridad de tu archivo de personaje y usarlo despues de muerto*/
-    private ArrayList nombresUsados;
-    private ArrayList derrotados;
-    private ArrayList baneados;
+    private ArrayList<String> nombresUsados;
+    private ArrayList<String> derrotados;
+    private ArrayList<String> baneados;
     
     
     
     //constructor con valores de inicio
     public Personaje() {
-    	this.vidaMaxima=new Atributo(1000);
-    	this.vidaActual=new Atributo(1000);
-		this.ataque=new Atributo(200);
-		this.defensa=new Atributo(500);
+    	this.vidaMaxima=new Atributo(300);
+    	this.vidaActual=new Atributo(300);
+		this.ataque=new Atributo(100);
+		this.defensa=new Atributo(100);
 		this.velocidad=new Atributo(50);
 		this.punteria=new Atributo(0.8);
 		this.critico=new Atributo(1.3);
+		
+		this.nombresUsados=new ArrayList<String>();
+		this.derrotados=new ArrayList<String>();
+		this.baneados=new ArrayList<String>();
 	}
     
     //getters y setters
@@ -153,27 +157,27 @@ public class Personaje implements Serializable{
 		this.mov3 = mov3;
 	}
 	public MovimientoBase getMov4() {
-		return mov3;
+		return mov4;
 	}
 	public void setMov3(MovimientoBase mov3) {
 		this.mov3 = mov3;
 	}
-	public ArrayList getNombresUsados() {
+	public ArrayList<String> getNombresUsados() {
         return nombresUsados;
     }
-    public void setNombresUsados(ArrayList nombresUsados) {
+    public void setNombresUsados(ArrayList<String> nombresUsados) {
         this.nombresUsados = nombresUsados;
     }
-    public ArrayList getDerrotados() {
+    public ArrayList<String> getDerrotados() {
         return derrotados;
     }
-    public void setDerrotados(ArrayList derrotados) {
+    public void setDerrotados(ArrayList<String> derrotados) {
         this.derrotados = derrotados;
     }
-    public ArrayList getBaneados() {
+    public ArrayList<String> getBaneados() {
         return baneados;
     }
-    public void setBaneados(ArrayList baneados) {
+    public void setBaneados(ArrayList<String> baneados) {
         this.baneados = baneados;
     }
 
@@ -203,13 +207,27 @@ public class Personaje implements Serializable{
         this.vidaMaxima.calcularFinal();
         this.velocidad.calcularFinal();
     }
+    
+    public void bajarConteos(){
+        this.ataque.bajarConteos();
+        this.defensa.bajarConteos();
+        this.critico.bajarConteos();
+        this.punteria.bajarConteos();
+        this.critico.bajarConteos();
+        this.vidaActual.bajarConteos();
+        this.vidaMaxima.bajarConteos();
+        this.velocidad.bajarConteos();
+    }
 
     @Override
     public String toString() {
-        return "Personaje [jugador=" + jugador + ", vivo=" + vivo + ", nombre=" + nombre + ", descripcion="
-                + descripcion + ", vidaMaxima=" + vidaMaxima + ", vidaActual=" + vidaActual + ", ataque=" + ataque
-                + ", defensa=" + defensa + ", velocidad=" + velocidad + ", punteria=" + punteria + ", critico="
-                + critico + ", nombresUsados=" + nombresUsados + ", derrotados=" + derrotados + ", baneados=" + baneados + ", ataques: "+mov1.getNombre()+" "+mov2.getNombre()+" "+ mov3.getNombre() +" "+mov4.getNombre()
+        return "Personaje "
+        		+ "\n[jugador=" + jugador + ", \n vivo=" + vivo + ", \n nombre=" + nombre + ", \n descripcion="
+                + descripcion + ", \n vidaMaxima=" + vidaMaxima + ", \n vidaActual=" + vidaActual + ", \n ataque=" + ataque
+                + ", \n defensa=" + defensa + ", \n velocidad=" + velocidad + ", \n punteria=" + punteria + ", \n critico="
+                + critico +  ",\n ataques: "+mov1.getNombre()+", "+ mov1.getDescripcion()
+                +"\n "+mov2.getNombre()+" "+ mov2.getDescripcion()+
+                "\n "+ mov3.getNombre()+" "+ mov3.getDescripcion() +"\n "+mov4.getNombre()+" "+ mov4.getDescripcion()
                 + "]";
     }
 

@@ -14,7 +14,7 @@ public class Ataque10 extends MovimientoBase implements Realizable{
 	 */
 	
 	public Ataque10() {
-		super("Colmillo vampírico", "Liberas tus colmillos y clavándolos profundamente en la carne del enemigo. "
+		super("Colmillo vampirico", "Liberas tus colmillos y clavándolos profundamente en la carne del enemigo. "
 				+ "Notas como la fuerza vital succionada te hace sentir más fuerte mientras "
 				+ "el enemigo se retuerce para huir del toque helado de la muerte.",
 				-10, "ataque");

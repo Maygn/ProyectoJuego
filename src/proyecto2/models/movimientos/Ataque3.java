@@ -13,8 +13,8 @@ public class Ataque3 extends MovimientoBase implements Realizable{
 	 * 
 	 */
 	public Ataque3() {
-		super("Puñalada mortal", "Te mueves  lanza hacia el oponente como un borrón hasta ponerte a su espalda y le clavas"
-				+ "la daga hasta la empuñadura con un movimiento preciso y rápido", 10, "ataque");
+		super("Puñalada mortal", "Te mueves  lanza hacia el oponente como un boron hasta ponerte a su espalda y le clavas"
+				+ "la daga hasta la empuñadura con un movimiento preciso y rapido", 10, "ataque");
 		
 	}
 	/**

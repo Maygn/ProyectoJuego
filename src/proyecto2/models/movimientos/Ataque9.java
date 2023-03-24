@@ -12,7 +12,7 @@ public class Ataque9 extends MovimientoBase implements Realizable{
 	 * 
 	 */
 	public Ataque9() {
-		super("Vórtice de tierra", "Liberas el poder de la naturaleza creando un poderoso "
+		super("Vortice de tierra", "Liberas el poder de la naturaleza creando un poderoso "
 				+ "torbellino de rocas y tierra, que absorbe y destruye todo a su paso"
 				, 00, "ataque");
 		

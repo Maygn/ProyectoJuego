@@ -13,7 +13,7 @@ public class Ataque6 extends MovimientoBase implements Realizable{
 	 * 
 	 */
 	public Ataque6() {
-		super("Tormenta de arena", "Convocas una poderosa ráfaga de viento que mueve la"
+		super("Tormenta de arena", "Convocas una poderosa rafaga de viento que mueve la"
 				+ " arena, que se levanta desde el suelo, envolviendo al oponente en una "
 				+ "nube de polvo.", 30, "ataque");
 		

@@ -12,7 +12,7 @@ public class Buff3 extends MovimientoBase implements Realizable{
 	 *   
 	 */
 	public Buff3() {//cura
-		super("Colibrí de vida", "En un movimiento de tu mano, aparece un pequeño pájaro hecho de pura energía verde. "
+		super("Aguila de vida", "En un movimiento de tu mano, aparece un pequeño pájaro hecho de pura energia verde. "
 				+ "Vuela hasta tu cabeza y se posa entre tu pelo, haciendo que de repente dejes de sentir dolor"
 				+ "y que te sientas lleno de energía"
 				, 40, "buff");

@@ -26,7 +26,7 @@ public class AleatorioDescartando<E> {
 		//crea ambas arraylist que estan declarados en los atributos de la clase.
 		this.recibidos=new ArrayList<E>(); 
 		this.enviados=new ArrayList<E>();
-		this.recibidos=lista;//guarda el arraylist que se le manda por cabecera en recibidos
+		this.recibidos=(ArrayList<E>) lista.clone();//guarda el arraylist que se le manda por cabecera en recibidos
 	}
 	
 //getters y setters
@@ -49,7 +49,15 @@ public class AleatorioDescartando<E> {
 	public void setMax(int max) {
 		this.max = max;
 	}
+	
 
+
+	public ArrayList<E> getRecibidos() {
+		return recibidos;
+	}
+
+
+	
 
 	/**
 	 * Retorna un numero aleatorio entre el minimo y el maximo, hasta que se te hayan ofrecido todas las opciones existentes.

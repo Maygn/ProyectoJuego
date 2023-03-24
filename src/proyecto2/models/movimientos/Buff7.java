@@ -14,8 +14,8 @@ public class Buff7 extends MovimientoBase implements Realizable{
 	 */
 	public Buff7() { //mejora de def y velocidad
 		super("Paso de sombra", "Te mueves a una velocidad inhumana, parece que desaparezcas de un lugar dejando una nube"
-				+ "de humo en tu lugar y apareciendo unos pasos más alla en otra nube de humo que "
-				+ "permanece unos segundos crepitando con energía oscura, mientras tus ojos brillan con una siniestra luz roja."
+				+ "de humo en tu lugar y apareciendo unos pasos mas alla en otra nube de humo que "
+				+ "permanece unos segundos crepitando con energia oscura, mientras tus ojos brillan con una siniestra luz roja."
 				, 30, "buff");
 		
 	}

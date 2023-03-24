@@ -26,6 +26,8 @@ public class GuardaPersonajes {
 
 		guardaObjetos.writeObject(p);
 		guardaObjetos.close();
+		
+		
 	}
 /**
  * @param Personaje p
@@ -47,9 +49,9 @@ public class GuardaPersonajes {
  * coge el archivo del personaje jugable de la carpeta y lee el personaje, luego returna el
  * personaje como objeto*/
 	public static Personaje cargar(String destino) throws ClassNotFoundException, IOException {
-		FileInputStream leeTexto 		= new FileInputStream(new File(destino + "/personaje.pj"));
-		ObjectInputStream leeObjetos 	= new ObjectInputStream(leeTexto);
-		Personaje pr1 					= (Personaje) leeObjetos.readObject();
+		FileInputStream leeTexto = new FileInputStream(new File(destino + "/personaje.pj"));
+		ObjectInputStream leeObjetos = new ObjectInputStream(leeTexto);
+		Personaje pr1 = (Personaje) leeObjetos.readObject();
 
 		leeObjetos.close();
 		leeTexto.close();
@@ -80,4 +82,6 @@ public class GuardaPersonajes {
 		return npcs;
 
 	}
+	
+	
 }

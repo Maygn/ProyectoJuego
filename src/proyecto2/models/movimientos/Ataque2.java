@@ -14,7 +14,7 @@ public class Ataque2 extends MovimientoBase implements Realizable{
 	public Ataque2() {
 		super("Tormenta de hielo", "desata una tempestad de vientos helados y "
 				+ "lanzas de hielo que se arremolinan alrededor del enemigo, "
-				+ "congelando su piel y enfriando sus huesos hasta la médula.",
+				+ "congelando su piel y enfriando sus huesos hasta la medula.",
 				10, "ataque");
 		
 	}

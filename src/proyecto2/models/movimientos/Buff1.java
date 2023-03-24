@@ -13,8 +13,8 @@ public class Buff1 extends MovimientoBase implements Realizable{
 	 *   
 	 */
 	public Buff1() {//baja velocidad
-		super("Congelación", "Desatas una tormenta congelante que deja al objetivo temblando y adormecido. "
-				+ "La ráfaga helada rodea al objetivo, congelando todo a su paso. Tu enemigo está cubierto de escarcha"
+		super("Congelacion", "Desatas una tormenta congelante que deja al objetivo temblando y adormecido. "
+				+ "La rafaga helada rodea al objetivo, congelando todo a su paso. Tu enemigo esta cubierto de escarcha"
 				+ " y parece que le cuesta moverse"
 				, 0, "buff");
 		

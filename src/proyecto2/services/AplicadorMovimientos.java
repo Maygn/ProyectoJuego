@@ -19,7 +19,7 @@ public class AplicadorMovimientos {
 	 * movimientos (curas buff o lo que sean)
 	 */
 	
-	static ArrayList<MovimientoBase> noPegar=new ArrayList<>();
+
 	static MovimientoBase[] opcionesAtaque=new MovimientoBase[3];
 	
 	static MovimientoBase a1=new Ataque1();
@@ -47,8 +47,7 @@ public class AplicadorMovimientos {
 	static ArrayList<MovimientoBase> ataques=new ArrayList<>(Arrays.asList(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10));
 	static ArrayList<MovimientoBase> buffs=new ArrayList<>(Arrays.asList(b1,b2,b3,b4,b5,b6,b7,b8,b9,b10));
 
-
-
+	
 /**
  * @param Personaje p
  * Permite elegir cuatro movimientos, dos de ellos del array de ataques agresivos y otros dos de los que no pegan.
@@ -75,7 +74,10 @@ public class AplicadorMovimientos {
 			}
 
 			arrayMovs[lcv] = opcionesAtaque[utils.leerDatoEntero("Cual de los tres movimientos ofrecidos quieres?", 1, 3) - 1];
+
 		}
+
+		
 		p.setMovimientos(arrayMovs);
 	}
 

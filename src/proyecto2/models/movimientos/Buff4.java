@@ -13,9 +13,9 @@ public class Buff4 extends MovimientoBase implements Realizable{
 	 *   
 	 */
 	public Buff4() {
-		super("Enlace del alma", "Místicamente, consigues enlazar tu alma con la de tu oponente. "
-				+ "Ves como se forma una línea en el aire que os une y por la que viaja una corriente"
-				+ "de energía que te fortalece mientras el enemigo parece cada vez mas débil"
+		super("Enlace del alma", "Misticamente, consigues enlazar tu alma con la de tu oponente. "
+				+ "Ves como se forma una linea en el aire que os une y por la que viaja una corriente"
+				+ "de energia que te fortalece mientras el enemigo parece cada vez mas debil"
 				, 40, "buff");
 		
 	}

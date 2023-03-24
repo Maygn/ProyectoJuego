@@ -12,7 +12,7 @@ public class Ataque8 extends MovimientoBase implements Realizable{
 	 * 
 	 */
 	public Ataque8() {
-		super("Onda psíquica", " Una ondulante ola de energía de otro mundo emana de ti, "
+		super("Onda psiquica", " Una ondulante ola de energia de otro mundo emana de ti, "
 				+ "doblando la realidad y aplastando las mentes de tus enemigos.",
 				60, "ataque");
 		

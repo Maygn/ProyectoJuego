@@ -13,7 +13,7 @@ public class Buff2 extends MovimientoBase implements Realizable{
 	 *   
 	 */
 	public Buff2() {//baja atk y punteria
-		super("Niebla mental", "Envuelves la mente del objetivo en una densa niebla, haciéndolo tambalearse y"
+		super("Niebla mental", "Envuelves la mente del objetivo en una densa niebla, haciendolo tambalearse y"
 				+ " perder la concentración. ¡Parece haber olvidado hasta su propio nombre."
 				, 20, "buff");
 		

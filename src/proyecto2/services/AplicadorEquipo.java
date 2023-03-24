@@ -21,70 +21,70 @@ public class AplicadorEquipo {
 
 		while (equipoElegidoDescartado[0] < MAXEQUIPO) {
 			
-			opcionAleatoria = i1.darAleatorio(); // Habria que hacer un metodo de UTILS (o no) que te de aleatorios sin repetir
+			opcionAleatoria = i1.darAleatorio(); 
 
 			switch (opcionAleatoria) {
 			case 1:
-				nombreEquipo="aumento de ataque.";
+				nombreEquipo="un aumento de ataque.";
 				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
 				break;
 			case 2:
-				nombreEquipo="aumento de defensa.";
+				nombreEquipo="un aumento de defensa.";
 				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
 				break;
 
 			case 3:
-				nombreEquipo="aumento de vida.";
+				nombreEquipo="un aumento de vida.";
 				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
 				break;
 			case 4:
-				nombreEquipo="pierde ataque a cambio de defensa.";
+				nombreEquipo="perder ataque a cambio de ganar defensa.";
 				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
 				break;
 				
 			case 5:
-				nombreEquipo="pierde defensa a cambio de ataque.";
+				nombreEquipo="perder defensa a cambio de ganar ataque.";
 				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
 				break;
 			case 6:
-				nombreEquipo="aumento de crítico.";
+				nombreEquipo="un aumento de critico.";
 				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
 				break;
 			case 7:
-				nombreEquipo="aumento de puntería.";
+				nombreEquipo="un aumento de punteria.";
 				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
 				break;
 			
 			case 8:
-				nombreEquipo="pierde vida a cambio de defensa.";
+				nombreEquipo="perder vida a cambio de ganar defensa.";
 				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
 				break;
 			case 9:
-				nombreEquipo="pierde defensa a cambio de vida.";
+				nombreEquipo="perder defensa a cambio de ganar vida.";
 				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
 				break;
 			case 10:
-				nombreEquipo="pierde velocidad a cambio de puntería.";
+				nombreEquipo="perder velocidad a cambio de ganar punteria.";
 				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
 				break;
 			case 11:
-				nombreEquipo="pierde puntería a cambio de velocidad.";
+				nombreEquipo="perder punteria a cambio de ganar velocidad.";
 				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
 				break;
 			case 12:
-				nombreEquipo="pierde crítico a cambio de puntería.";
+				nombreEquipo="perder critico a cambio de ganar punteria.";
 				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
 				break;
 			case 13:
-				nombreEquipo="pierde puntería a cambio de crítico.";
+				nombreEquipo="perder punteria a cambio de ganar critico.";
 				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
 				break;
 			case 14:
-				nombreEquipo="pierde crítico a cambio de velocidad.";
+				nombreEquipo="perder critico a cambio de ganar velocidad.";
 				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
 				break;
 			case 15:
-				nombreEquipo="pierde velocidad a cambio de crítico.";
+				nombreEquipo="perder velocidad a cambio de ganar critico.";
 				equipoElegidoDescartado=preguntarPasiva(p, opcionAleatoria, equipoElegidoDescartado, maximoDescarte, nombreEquipo);	
 				break;
 
@@ -103,7 +103,7 @@ public class AplicadorEquipo {
 	 * de veces.
 	 * */
 	public static int[] preguntarPasiva(Personaje p, int opcionAleatoria, int[] equipoElegidoDescartado, int maximoDescarte, String nombreEquipo) {
-		if (utils.leerCharEspecifico("Quieres un "+ nombreEquipo +"? [s]/[n] (Elegidos :" + equipoElegidoDescartado[0]//que no pregunte si ya no puede descartar mas
+		if (utils.leerCharEspecifico(" Quieres  "+ nombreEquipo +"? [s]/[n] (Elegidos :" + equipoElegidoDescartado[0]//que no pregunte si ya no puede descartar mas
 				+ " ,descartados: " + equipoElegidoDescartado[1], new char[] { 'S', 'N' }) == 'S') {
 			aplicarPasiva(p, opcionAleatoria);
 			equipoElegidoDescartado[0]++;

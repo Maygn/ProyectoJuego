@@ -13,7 +13,7 @@ public class Ataque7 extends MovimientoBase implements Realizable{
 	 * 
 	 */
 	public Ataque7() {
-		super("Flercha venenosa", "Lanzas una flecha verde oscuro "
+		super("Flecha venenosa", "Lanzas una flecha verde oscuro "
 				+ "con punta enormemente afilada que deja a su paso una estela de neblina "
 				+ "morada conforme atraviesa el aire"
 				, 40, "ataque");
