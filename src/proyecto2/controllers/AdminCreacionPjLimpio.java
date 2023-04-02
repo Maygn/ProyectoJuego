@@ -40,7 +40,7 @@ public class AdminCreacionPjLimpio {
 		p1.setJugador("NPC");
 		
 		CreacionPJ.creacionEnSerie(p1);
-		p1.getVidaMaxima().setValorBase(p1.getVidaMaxima().getValorBase()/20);
+		p1.getVidaMaxima().setValorBase(p1.getVidaMaxima().getValorBase()/3);
 		p1.actualizarAtributos();
 
 		try {

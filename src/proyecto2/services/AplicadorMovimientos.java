@@ -70,7 +70,7 @@ public class AplicadorMovimientos {
 				}
 
 				opcionesAtaque[i] = sacado;
-				System.out.println("Opcion " + (i + 1) + sacado.getNombre());
+				System.out.println("Opcion " + (i + 1) +" "+ sacado.getNombre());
 			}
 
 			arrayMovs[lcv] = opcionesAtaque[utils.leerDatoEntero("Cual de los tres movimientos ofrecidos quieres?", 1, 3) - 1];

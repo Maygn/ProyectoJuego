@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import proyecto2.models.Personaje;
-import proyecto2.models.SecuenciaCombate;
 import proyecto2.utilities.AleatorioDescartando;
 import proyecto2.utilities.GuardaPersonajes;
 

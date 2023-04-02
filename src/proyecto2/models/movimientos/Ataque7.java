@@ -28,7 +28,7 @@ public class Ataque7 extends MovimientoBase implements Realizable{
 	@Override
 	public void realizar(Personaje activo, Personaje pasivo) {
 		pasivo.setVidaActual(pasivo.getVidaActual().getValorBase()-5);
-		pasivo.getVidaActual().addModificadorLineal(new Modificador(-10,99,"",5));
+		pasivo.getVidaActual().addModificadorLineal(new Modificador(-10,99,"",-5));
 	}
 
 }

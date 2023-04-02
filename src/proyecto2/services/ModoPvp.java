@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import proyecto2.controllers.App;
 import proyecto2.models.Personaje;
-import proyecto2.models.SecuenciaCombate;
 import proyecto2.utilities.GuardaPersonajes;
 
 public class ModoPvp {

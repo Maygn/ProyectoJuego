@@ -1,5 +1,6 @@
 package proyecto2.services;
 
+import proyecto2.models.Atributo;
 import proyecto2.models.Personaje;
 import proyecto2.utilities.utils;
 
@@ -29,6 +30,19 @@ public class CreacionPJ {
 		
 		p.setDescripcion(utils.pedirString("Describe tu especie, profesion o lo que quieras"));
 	}
+	
+	
+	private static void reasignarAtributos(Personaje p) {
+		p.setVidaMaxima(new Atributo(300));
+    	p.setVidaActual(new Atributo(300));
+		p.setAtaque(new Atributo(100));
+		p.setDefensa(new Atributo(100));
+		p.setVelocidad(new Atributo(50));
+		p.setPunteria(new Atributo(0.8));
+		p.setCritico(new Atributo(1.3));
+	}
+	
+	
 	/**
 	 * @param Personaje p
 	 * Sobre los valores básicos por defecto para las caracteristicas de personajes,
@@ -76,6 +90,7 @@ public class CreacionPJ {
 	//Solo es la secuencia de métodos de esta clase para llamarla desde el main con uno solo.
 	public static void creacionEnSerie(Personaje p) {
 		datosFijos(p);
+		reasignarAtributos(p);
 		datosVariables(p);
 		ponerEquipo(p);
 		elegirMovimientos(p);

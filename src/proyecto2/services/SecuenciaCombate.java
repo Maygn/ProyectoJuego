@@ -1,7 +1,8 @@
-package proyecto2.models;
+package proyecto2.services;
 
 import java.io.Console;
 
+import proyecto2.models.Personaje;
 import proyecto2.utilities.utils;
 
 public class SecuenciaCombate {
@@ -27,28 +28,40 @@ public class SecuenciaCombate {
 //		CAMBIAR UNA VEZ TERMINEMOS Y SE VAYA A COMPILAR
 //		LA CONSOLA DE ECLIPSE NO TOLERA System.console()
 		
-//		Console cs1=System.console(); //Define la consola actual
-//		boolean fuera=false;
-//		int elegido=0;
-//		
-//		while(!fuera) {
-//			char[] arr1=cs1.readPassword("Cual de los ataques quieres usar?"); //Usa la consola para leer el movimiento, sin mostrar lo que escribe el usuario
-//			elegido=Character.getNumericValue(arr1[0]); // Lo convierte en valor numérico.
-//			
-//			if(elegido>0 && elegido <5) {
-//				fuera=true;
-//			}
-//			else {
-//				System.out.println("Ese número no es uno de tus cuatro movimientos. ");
-//				System.out.println("Tus movimientos disponibles son: 1-" + mov1 +"\n 2-"
-//						+ mov2 +"\n 3-"+mov3+ "\n 4-" +mov4);
-//			}
-//		}
+		Console cs1=System.console(); //Define la consola actual
+		boolean fuera=false;
+		int elegido=0;
+		char [] arr1=new char[1];
 		
+		
+		if(cs1!=null) {//Si el entorno tiene consola (No en eclipse, por ejemplo)
+		while(!fuera) {
+			char[] arrTemporal=cs1.readPassword("Cual de los ataques quieres usar?");
+			
+			if(arrTemporal.length>0) { //Si el array temporal tiene valor (El usuario no le ha dado directamente a enter)
+				arr1=arrTemporal;
+			}
+			//arr1=cs1.readPassword("Cual de los ataques quieres usar?"); //Usa la consola para leer el movimiento, sin mostrar lo que escribe el usuario
+			elegido=Character.getNumericValue(arr1[0]); // Lo convierte en valor numérico.
+			
+			
+			if(elegido>0 && elegido <5) {
+				fuera=true;
+			}
+			else {
+				System.out.println("Ese número no es uno de tus cuatro movimientos. ");
+				System.out.println("Tus movimientos disponibles son: 1-" + mov1 +"\n 2-"
+						+ mov2 +"\n 3-"+mov3+ "\n 4-" +mov4);
+			}
+		}
+		}
+		else {
+			elegido=utils.leerDatoEntero("Cual de los ataques quieres usar?", 1, 4);
+		}
         
         
 		
-		switch (utils.leerDatoEntero("Elige el movimiento", 1, 4)) { //CAMBIAR POR elegido CUANDO SE COMPILE
+		switch (elegido) { //CAMBIAR POR elegido CUANDO SE COMPILE
 		case 1:
 			p1.setMovElegido(p1.getMov1());
 			break;
